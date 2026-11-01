@@ -51,13 +51,13 @@ function codeBlock(file, startRe, n) {
 const teamTable = () =>
   '| # | SRN | Name |\n|---|---|---|\n' + team.members.map((m, i) => `| ${i + 1} | ${m.srn} | ${m.name} |`).join('\n') + '\n';
 
-const cover = () => `<section class="cover">
+const cover = (title = 'ShopSense', subtitle = 'A Hybrid Semantic Product Discovery Engine with Association-Rule Recommendations', kicker = team.course) => `<section class="cover">
 <div class="uni">${team.university}</div>
 <div class="dept">${team.department}</div>
 <div class="rule"></div>
-<div class="kicker">${team.course}</div>
-<h1 class="coverTitle">ShopSense</h1>
-<div class="subtitle">A Hybrid Semantic Product Discovery Engine with Association-Rule Recommendations</div>
+<div class="kicker">${kicker}</div>
+<h1 class="coverTitle">${title}</h1>
+<div class="subtitle">${subtitle}</div>
 <div class="stack">PostgreSQL 17 &nbsp;+&nbsp; pgvector &nbsp;+&nbsp; Next.js</div>
 <table class="coverTeam"><thead><tr><th>SRN</th><th>Name</th></tr></thead><tbody>
 ${team.members.map((m) => `<tr><td>${m.srn}</td><td>${m.name}</td></tr>`).join('\n')}
@@ -67,7 +67,7 @@ ${team.members.map((m) => `<tr><td>${m.srn}</td><td>${m.name}</td></tr>`).join('
 </section>`;
 
 let md = read(input)
-  .replace('{{COVER}}', cover())
+  .replace(/\{\{COVER(?::([^|}]*)\|([^|}]*)\|([^}]*))?\}\}/, (_, t, st, k) => (t ? cover(t, st, k) : cover()))
   .replace('{{TEAM_TABLE}}', teamTable())
   .replace('{{ER_DIAGRAM}}', () => read('docs/ER-diagram.md').match(/```mermaid[\s\S]*?```/)[0])
   .replace(/\{\{TREE:([^|}]+)\|(\d+)\}\}/g, (_, d, depth) => '```text\n' + d + '/\n' + tree(d, Number(depth)).join('\n') + '\n```\n')
