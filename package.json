@@ -1,0 +1,46 @@
+{
+  "name": "shopsense",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hybrid semantic product discovery engine on PostgreSQL + pgvector with Next.js",
+  "scripts": {
+    "dev": "next dev",
+    "dev:all": "concurrently -n web,worker -c blue,magenta \"next dev\" \"npm run worker\"",
+    "build": "next build",
+    "start": "next start",
+    "db:setup": "node --env-file=.env scripts/db-setup.mjs",
+    "data:fetch": "node scripts/fetch-dataset.mjs",
+    "db:seed": "node --env-file=.env scripts/seed.mjs",
+    "worker": "node --env-file=.env scripts/embed-worker.mjs",
+    "embed:all": "node --env-file=.env scripts/embed-worker.mjs --once",
+    "eval": "node --env-file=.env scripts/evaluate.mjs",
+    "bench": "node --env-file=.env scripts/benchmark.mjs",
+    "race": "node --env-file=.env scripts/race-demo.mjs",
+    "screenshots": "node --env-file=.env scripts/screenshots.mjs",
+    "report": "node scripts/build-report.mjs",
+    "docs": "node --env-file=.env scripts/gen-docs.mjs",
+    "test": "node --env-file=.env --test \"tests/*.test.mjs\""
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.7.0",
+    "jose": "^5.9.6",
+    "next": "^15.5.0",
+    "pg": "^8.13.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "recharts": "^2.15.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.10.0",
+    "@types/pg": "^8.11.10",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "concurrently": "^9.1.0",
+    "marked": "^18.1.2",
+    "playwright-core": "^1.64.1",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.7.2"
+  }
+}

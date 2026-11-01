@@ -1,0 +1,10 @@
+node_modules/
+.next/
+.env
+.env.local
+data/raw/
+*.log
+.cache/
+next-env.d.ts
+tsconfig.tsbuildinfo
+data/*.jsonl

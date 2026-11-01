@@ -1,0 +1,16 @@
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    container_name: shopsense-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-shopsense_owner}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me_owner}
+      POSTGRES_DB: ${POSTGRES_DB:-shopsense}
+    ports:
+      - "${POSTGRES_PORT:-5433}:5432"
+    volumes:
+      - shopsense_pgdata:/var/lib/postgresql/data
+
+volumes:
+  shopsense_pgdata:
