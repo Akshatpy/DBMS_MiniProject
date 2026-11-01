@@ -38,7 +38,7 @@ Browser ──► Next.js (App Router: pages + Route Handlers)
 ```
 
 Full documentation is in [`docs/`](docs/): ER diagram and relational schema, data dictionary, schema reference,
-vector-database design, important queries, benchmark results, test report and the project report.
+vector-database design, important queries, benchmark results and the submission report (`ShopSense-Project-Report.pdf`).
 
 ## Prerequisites
 
@@ -94,7 +94,8 @@ If you do not want to use Docker, create a database yourself, run `CREATE EXTENS
 | `npm run bench` | Index performance study → `docs/benchmark-results.md` |
 | `npm run race` | Command-line concurrency demo (lost update vs `FOR UPDATE`) |
 | `npm run docs` | Regenerate the data dictionary and schema reference from the live database |
-| `npm run report` | Build `docs/Project-Report.pdf` from `docs/REPORT.md` (needs Microsoft Edge and internet for Mermaid) |
+| `npm run report` | Build `docs/ShopSense-Project-Report.pdf` (the submission report) from `docs/PROJECT_REPORT.md`; edit names and SRNs in `docs/team.json` first. Needs Microsoft Edge and internet |
+| `npm run code-shots` | Render the source-code screenshots used in the report |
 | `npm run screenshots` | Capture the application screenshots (needs the app running and Microsoft Edge) |
 
 ## Project layout
