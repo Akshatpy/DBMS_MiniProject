@@ -17,7 +17,8 @@
     "bench": "node --env-file=.env scripts/benchmark.mjs",
     "race": "node --env-file=.env scripts/race-demo.mjs",
     "screenshots": "node --env-file=.env scripts/screenshots.mjs",
-    "report": "node scripts/build-report.mjs",
+    "code-shots": "node scripts/code-shots.mjs",
+    "report": "node scripts/build-pdf.mjs docs/PROJECT_REPORT.md docs/ShopSense-Project-Report.pdf",
     "docs": "node --env-file=.env scripts/gen-docs.mjs",
     "test": "node --env-file=.env --test \"tests/*.test.mjs\""
   },

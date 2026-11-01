@@ -1,0 +1,14 @@
+{
+  "_comment": "Edit this file, then run `npm run report` to rebuild the PDF. Replace the PES... placeholders with the real SRNs.",
+  "university": "PES University",
+  "department": "Department of Computer Science and Engineering",
+  "course": "Database Management Systems: Experiential Learning, Level 3 Project",
+  "instructor": "Dr. Nagasundari S",
+  "section": "",
+  "semester": "",
+  "repo": "https://github.com/Akshatpy/DBMS_MiniProject",
+  "members": [
+    { "name": "Akshat Sharma", "srn": "PES__________" },
+    { "name": "Teammate name", "srn": "PES__________" }
+  ]
+}
