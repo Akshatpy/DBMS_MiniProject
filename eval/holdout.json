@@ -1,0 +1,24 @@
+{
+  "_comment": "HELD-OUT set. Written BEFORE the fusion algorithm was revised and never used for tuning; it checks that an improvement seen on eval/queries.json generalises. Same labelling scheme as queries.json.",
+  "queries": [
+    { "q": "something to carry my laptop and books to class", "type": "natural_language", "category": "Clothing Shoes and Jewelry", "concept": "backpack|bag" },
+    { "q": "cook burgers at a summer barbecue", "type": "natural_language", "category": "Patio Lawn and Garden", "concept": "grill|bbq|barbecue" },
+    { "q": "grow vegetables from scratch", "type": "natural_language", "category": "Patio Lawn and Garden", "concept": "seed|planter|raised bed|soil|grow" },
+    { "q": "keep my phone from cracking when dropped", "type": "natural_language", "category": "Electronics", "concept": "case|cover|protect" },
+    { "q": "stay hydrated on a long hike", "type": "natural_language", "category": "Sports and Outdoors", "concept": "bottle|hydration|water" },
+    { "q": "get stronger with weights at home", "type": "natural_language", "category": "Sports and Outdoors", "concept": "dumbbell|kettlebell|weight" },
+    { "q": "clean and soften my hair", "type": "natural_language", "category": "Beauty and Personal Care", "concept": "shampoo|conditioner" },
+    { "q": "pretty colour for my fingernails", "type": "natural_language", "category": "Beauty and Personal Care", "concept": "nail" },
+    { "q": "cuddly gift for a child's birthday", "type": "natural_language", "category": "Toys and Games", "concept": "plush|stuffed" },
+    { "q": "something fun to play with the whole family", "type": "natural_language", "category": "Toys and Games", "concept": "game" },
+    { "q": "keep my feet warm in winter", "type": "natural_language", "category": "Clothing Shoes and Jewelry", "concept": "sock|boot|slipper|fleece|warm" },
+    { "q": "formal outfit for a wedding", "type": "natural_language", "category": "Clothing Shoes and Jewelry", "concept": "dress" },
+
+    { "q": "phone case", "type": "exact", "category": "Electronics", "concept": "case" },
+    { "q": "shampoo", "type": "exact", "category": "Beauty and Personal Care", "concept": "shampoo" },
+    { "q": "water bottle", "type": "exact", "category": "Sports and Outdoors", "concept": "bottle" },
+    { "q": "laptop stand", "type": "exact", "category": "Electronics", "concept": "stand" },
+    { "q": "plush toy", "type": "exact", "category": "Toys and Games", "concept": "plush" },
+    { "q": "gardening gloves", "type": "exact", "category": "Patio Lawn and Garden", "concept": "glove" }
+  ]
+}
