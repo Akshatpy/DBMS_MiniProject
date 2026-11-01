@@ -95,6 +95,7 @@ If you do not want to use Docker, create a database yourself, run `CREATE EXTENS
 | `npm run race` | Command-line concurrency demo (lost update vs `FOR UPDATE`) |
 | `npm run docs` | Regenerate the data dictionary and schema reference from the live database |
 | `npm run report` | Build `docs/ShopSense-Project-Report.pdf` (the submission report) from `docs/PROJECT_REPORT.md`; edit names and SRNs in `docs/team.json` first. Needs Microsoft Edge and internet |
+| `npm run guide` | Build `docs/ShopSense-Viva-Guide.pdf` from `docs/VIVA_GUIDE.md` |
 | `npm run code-shots` | Render the source-code screenshots used in the report |
 | `npm run screenshots` | Capture the application screenshots (needs the app running and Microsoft Edge) |
 

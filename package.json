@@ -20,7 +20,8 @@
     "code-shots": "node scripts/code-shots.mjs",
     "report": "node scripts/build-pdf.mjs docs/PROJECT_REPORT.md docs/ShopSense-Project-Report.pdf",
     "docs": "node --env-file=.env scripts/gen-docs.mjs",
-    "test": "node --env-file=.env --test \"tests/*.test.mjs\""
+    "test": "node --env-file=.env --test \"tests/*.test.mjs\"",
+    "guide": "node scripts/build-pdf.mjs docs/VIVA_GUIDE.md docs/ShopSense-Viva-Guide.pdf"
   },
   "dependencies": {
     "@huggingface/transformers": "^3.7.0",
